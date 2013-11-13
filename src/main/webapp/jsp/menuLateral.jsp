@@ -48,14 +48,14 @@
     } else {
         menu += "<li>";
     }
-    menu += "<a href=\"Controller?class=actividad&method=update\">Crear</a></li>";
+    menu += "<a href=\"Controller?class=actividad&method=update\">Update</a></li>";
 
     if (oContexto.getClase().equals("actividad") && oContexto.getMetodo().equals("delete")) {
         menu += "<li class=\"active\">";
     } else {
         menu += "<li>";
     }
-    menu += "<a href=\"Controller?class=actividad&method=delete\">Listar</a></li>";
+    menu += "<a href=\"Controller?class=actividad&method=delete\">Delete</a></li>";
     menu += "</ul></div>";
 %>
 <%=menu%>
