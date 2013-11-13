@@ -13,7 +13,7 @@ import java.util.Date;
  * @author mati
  */
 
-public class Entrega {
+public class EntregaBean {
    
   
     private Integer id;
@@ -26,10 +26,10 @@ public class Entrega {
 
     private Date fecha;
 
-    public Entrega() {
+    public EntregaBean() {
     }
 
-    public Entrega(Integer id) {
+    public EntregaBean(Integer id) {
         this.id = id;
     }
 
