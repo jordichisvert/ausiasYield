@@ -16,7 +16,7 @@ import net.daw.helper.Contexto;
  *
  * @author mati
  */
-public class ActividadList {
+public class ActividadList1 {
 
     public Object execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Contexto oContexto = (Contexto) request.getAttribute("contexto");

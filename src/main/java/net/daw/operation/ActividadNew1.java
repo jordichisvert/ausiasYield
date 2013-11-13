@@ -12,7 +12,7 @@ import net.daw.helper.Contexto;
  *
  * @author mati
  */
-public class ActividadNew {
+public class ActividadNew1 {
    public Object execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Contexto oContexto = (Contexto) request.getAttribute("contexto");
         oContexto.setVista("jsp/actividad/form.jsp");        

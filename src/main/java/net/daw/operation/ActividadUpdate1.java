@@ -16,10 +16,10 @@ import net.daw.parameter.ActividadParam;
  *
  * @author mati
  */
-public class ActividadView {
+public class ActividadUpdate1 {
      public Object execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         Contexto oContexto = (Contexto) request.getAttribute("contexto");
-        oContexto.setVista("jsp/actividad/form.jsp");        
+        oContexto.setVista("jsp/actividad/form.jsp");
         ActividadBean oActividadBean;
         ActividadDao oActividadDao;
         oActividadBean = new ActividadBean();
@@ -29,9 +29,14 @@ public class ActividadView {
         try {
             oActividadBean = oActividadDao.get(oActividadBean);
         } catch (Exception e) {
-            throw new ServletException("Controller: View Error: Phase 1: " + e.getMessage());
+            throw new ServletException("Controller: Update Error: Phase 1: " + e.getMessage());
         }
-        oActividadBean = oActividadParam.load(oActividadBean);
+        try {
+            oActividadBean = oActividadParam.load(oActividadBean);
+        } catch (NumberFormatException e) {
+            oContexto.setVista("jsp/mensaje.jsp");
+            return "Tipo de dato incorrecto en uno de los campos del formulario";
+        }
         return oActividadBean;
-    }
+    }  
 }

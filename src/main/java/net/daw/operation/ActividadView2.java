@@ -19,7 +19,7 @@ public class ActividadView2 {
         oContexto.setClase("actividad");
         oContexto.setMetodo("list");
         oContexto.setFase("1");
-        ActividadList oOperacion = new ActividadList();
+        ActividadList1 oOperacion = new ActividadList1();
         return oOperacion.execute(request, response);
     }
 }

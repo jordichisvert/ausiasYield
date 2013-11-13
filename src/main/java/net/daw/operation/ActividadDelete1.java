@@ -6,7 +6,7 @@ import net.daw.bean.ActividadBean;
 import net.daw.helper.Contexto;
 import net.daw.parameter.ActividadParam;
 
-public class ActividadDelete implements Operation {
+public class ActividadDelete1 implements Operation {
 
     @Override
     public Object execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
